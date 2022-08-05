@@ -17,7 +17,7 @@ class Region extends Model
 
 
         //relacion entre contiennte y region 
-        public function regiones(){
-             return $this->hasMany(Region::class , 'continent_id');
+        public function Paises(){
+             return $this->hasMany(Country::class , 'region_id');
         }
 }
