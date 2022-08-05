@@ -15,4 +15,12 @@ class Country extends Model
     public $timestamp = false;
     //crea datos falsos 
     use HasFactory;
+
+
+   public function region(){
+     return $this->belongsTo(Region::class,
+                                   'Region_Id');
+    }
+
+
 }
