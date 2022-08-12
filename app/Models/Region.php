@@ -20,4 +20,12 @@ class Region extends Model
         public function Paises(){
              return $this->hasMany(Country::class , 'region_id');
         }
+
+        //relacion M:M entre pais y sus idiomas
+        public function idiomas(){
+                 return $this->belongsToMany(Idioma::class,
+                                             'country_languages',
+                                             'country_id',
+                                             'language_id')->withPivot('official');
+        }
 }

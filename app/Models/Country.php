@@ -19,7 +19,7 @@ class Country extends Model
 
    public function region(){
      return $this->belongsTo(Region::class,
-                                   'region_Id');
+                                   'region_id');
     }
 
 
