@@ -1,0 +1,14 @@
+
+1.Seleccione la fecha de independencia más antigua registrada en el mundo
+ Country::select('national_day')->min('national_day')
+
+2.Seleccione la fecha de independencia más actual o moderna, 
+de los paises de la región “Western Europe”
+ Country::find(10)->select('national_day')->max('national_day')
+
+3. Seleccione los paises en los cuales se habla Italian, 
+que tengan fecha de independencia o creación.
+  Idioma::find(28)->paises()->select('name','national_day')
+  ->where('national_day','>','0')->get()
+   
+
